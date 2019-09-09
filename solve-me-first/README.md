@@ -19,11 +19,9 @@ Sample Input
 
     a = 2
     b = 3
-
 Sample Output
 
     5
-
 Explanation
 
 The sum of the two integers a and b is computed as: 2+3=5.
