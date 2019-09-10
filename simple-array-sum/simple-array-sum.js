@@ -26,11 +26,17 @@ function readLine() {
  * Complete the simpleArraySum function below.
  */
 function simpleArraySum(ar) {
+    /*
+     * Write your code here.
+     */
     
-    return ar.reduce(function (acc, val) {
-        return acc + val;
-    });
+    var sum = 0;
+    for (var i = 0; i < ar.length; i++)
+    {
+        sum += ar[i];
+    }   
 
+    return sum;
 }
 
 function main() {
