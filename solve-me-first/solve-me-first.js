@@ -1,17 +1,32 @@
-#include <stdio.h>
-#include <string.h>
-#include <math.h>
-#include <stdlib.h>
+process.stdin.resume();
+process.stdin.setEncoding('ascii');
 
+var input_stdin = "";
+var input_stdin_array = "";
+var input_currentline = 0;
 
-int solveMeFirst(int a, int b) {
-  return a+b;
+process.stdin.on('data', function (data) {
+    input_stdin += data;
+});
+
+process.stdin.on('end', function () {
+    input_stdin_array = input_stdin.split("\n");
+    main();    
+});
+
+function readLine() {
+    return input_stdin_array[input_currentline++];
 }
-int main() {
-  int num1,num2;
-  scanf("%d %d",&num1,&num2);
-  int sum; 
-  sum = solveMeFirst(num1,num2);
-  printf("%d",sum);
-  return 0;
+
+function solveMeFirst(a, b) {
+  return a + b 
+}
+
+
+function main() {
+    var a = parseInt(readLine());
+    var b = parseInt(readLine());;
+
+    var res = solveMeFirst(a, b);
+    console.log(res);
 }
